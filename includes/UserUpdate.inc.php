@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST["user_name"];
     $pwd = $_POST["pwd"];
+    $email = $_POST["email"];
     
 
 
@@ -14,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->bindParam(":user_name", $username);
         $stmt->bindParam(":pwd", $pwd);
+        $stmt ->bindParam(":email", $email);
       
 
         $stmt->execute();
